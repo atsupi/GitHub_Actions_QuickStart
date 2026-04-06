@@ -19,5 +19,6 @@ jobs:
             python -m venv .venv
             source .venv/bin/activate
             pip install pytest
-            pytest python/test/test_main.py
+            cd python
+            python -m pytest
       - run: echo "This job's status is ${{ job.status }}."
