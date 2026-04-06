@@ -14,4 +14,10 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Run Python test
+        run: |
+            python -m venv .venv
+            source .venv/bin/activate
+            pip install pytest
+            pytest python/test/test_main.py
       - run: echo "This job's status is ${{ job.status }}."
