@@ -1,5 +1,8 @@
 name: GitHub Actions Demo
 on: [push]
+env:
+  # to ensure that JavaScript actions run on Node 24, which is the latest LTS version as of June 2024
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
